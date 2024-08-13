@@ -28,14 +28,14 @@ const ToDoList = () => {
             </div>
             <ul className = " p-0 m-0">
                 {taskList.map((task, index) => (
-                    <li className="lista p-2 mt-1 d-flex justify-content-between" key = {index}>{task}<FontAwesomeIcon className="iconoEliminar" icon={faXmark} onClick={() => deleteTask(index)}/></li>
+                    <li className="lista p-2 mt-1 d-flex justify-content-between align-items-center" key = {index}>{task}<FontAwesomeIcon className="iconoEliminar" icon={faXmark} onClick={() => deleteTask(index)}/></li>
                 ))}
             </ul>
-            <div className = "d-flex justify-content-between itemsCounter mt-1 p-1 align-items-center">
-                <p className="">
+            <div className = "d-flex justify-content-between itemsCounter align-items-center mt-1 p-1 ">
+                <p className=" mb-0">
                     {counterTask} items left
                 </p>
-                <p className="">
+                <p className="mb-0">
                     {counterDone} items complete
                 </p>
             </div>
