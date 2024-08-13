@@ -7,6 +7,7 @@ const ToDoList = () => {
     const [task, setTask] = useState("") 
     const [taskList, setTaskList] = useState([])
     const [counterTask, setCounterTask] = useState(0)
+    const [counterDone, setCounterDone] = useState(0)
     function newTask (event){
         if (event.key ==="Enter" && task.trim() !==""){
             setTaskList([...taskList, task]);
@@ -17,6 +18,7 @@ const ToDoList = () => {
     function deleteTask (index){
         setTaskList(taskList.filter((_, i) => i !== index));
         setCounterTask(counterTask - 1) 
+        setCounterDone(counterDone + 1)
     }
     return (
         <>
@@ -34,7 +36,7 @@ const ToDoList = () => {
                     {counterTask} items left
                 </p>
                 <p className="">
-                    {counterTask} items left
+                    {counterDone} items complete
                 </p>
             </div>
         </div>
