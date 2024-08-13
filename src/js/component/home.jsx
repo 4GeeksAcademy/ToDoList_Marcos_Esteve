@@ -8,7 +8,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	return (
 		<><div className="d-flex flex-column min-vh-100">
-			<h1 className="d-flex flex-column align-items-center justify-content-center">todos</h1>
+			<h1 className="d-flex flex-column align-items-center justify-content-center title">todos</h1>
 			<ToDoList/>
 			<footer className="footer mt-auto py-3 bg-light text-center">
                 <div className="container">
